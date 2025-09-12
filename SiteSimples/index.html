@@ -9,15 +9,26 @@
 </head>
 
 <body class="light-theme">
+
+  <button id="toggle-theme">Trocar Tema</button>
     <h1>Cabeçalho</h1>
 
     <p id="msg">Parágrafo:</p>
-
+ 
     <ul>
         <li class="list">listas</li>
         <li class="list">add light and dark themes</li>
         <li>enable switch themes</li>
     </ul>
+     <script>
+    const btn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+      body.classList.toggle("dark-theme");
+    });
+  </script>
 </body>
 
 </html>
