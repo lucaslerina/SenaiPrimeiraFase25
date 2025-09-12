@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-
-<body class="light-theme">
-
-  <button id="toggle-theme">Trocar Tema</button>
-    <h1>Cabeçalho</h1>
-
-    <p id="msg">Parágrafo:</p>
- 
-    <ul>
-        <li class="list">listas</li>
-        <li class="list">add light and dark themes</li>
-        <li>enable switch themes</li>
-    </ul>
-    
-   <script>
+<!-- <script>
   // Pega o botão pelo id="toggle-theme"
   const btn = document.getElementById("toggle-theme");
 
@@ -41,8 +18,7 @@
     body.classList.toggle("dark-theme");
 
   });
-</script>
+</script> -->
 
-</body>
 
-</html>
+ <button id="toggle-theme">Trocar Tema</button>
