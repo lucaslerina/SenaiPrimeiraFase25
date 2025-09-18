@@ -1,0 +1,58 @@
+O que significa cada parte?
+
+1 - ano % 4 === 0
+  * % é o resto da divisão.
+  * Aqui estamos verificando se o ano é divisível por 4.
+  * Exemplo: 2024 % 4 = 0 ✅ (divisível).
+
+2  - ano % 100 !== 0
+  * Verifica se o ano não é divisível por 100.
+  * Isso porque anos como 1900, 2100 não são bissextos, mesmo sendo divisíveis por 4.
+  * Exemplo: 1900 % 100 = 0 ❌ (então não é bissexto).
+
+2.5 - No JavaScript (e em várias linguagens), !== significa: 
+      “diferente de”
+
+👉 Mas com comparação estrita.
+
+ >>>   Diferença entre != e !==
+
+!= (diferente “normal”)
+
+   * Compara valores, mas ignora o tipo.
+
+   Exemplo:
+    5 != "5"   // false, porque o JS converte "5" para número
+ 
+
+!== (diferente “estrito”)
+
+  * Compara valores e também os tipos.
+
+   Exemplo:
+   5 !== "5"  // true, porque um é número e o outro é string
+
+<!-- No seu código:-->
+ano % 100 !== 0
+
+Isso significa:
+➡️ “O resto da divisão do ano por 100 é diferente de 0”.
+Ou seja: o ano não é divisível por 100.
+
+    3  - (ano % 4 === 0 && ano % 100 !== 0)
+
+        * Essa parte junta as duas condições anteriores com && (E).
+        * Ou seja: o ano precisa ser divisível por 4 E não divisível por 100.
+        * Exemplo: 2024 → divisível por 4 ✅ e não divisível por 100 ✅ → bissexto.
+
+    4  -  || ano % 400 === 0
+
+       * || significa OU.
+       * Se o ano for divisível por 400, ele é bissexto independente da regra anterior.
+       * Exemplo: 2000 → divisível por 400 ✅ → bissexto.
+
+📌 Resumindo a lógica:
+
+O ano é bissexto se:
+👉 Divisível por 4 e não por 100
+👉 OU divisível por 400

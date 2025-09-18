@@ -1,0 +1,44 @@
+Para que serve saber o tamanho (length) de uma string?
+
+Validação de entrada do usuário:
+Exemplo clássico: verificar se uma senha tem tamanho mínimo para ser segura (como no seu código).
+Garantir que um nome digitado não seja vazio ou muito curto.
+Validar se um campo de texto está dentro de limites (máximo/mínimo de caracteres).
+Processar ou formatar texto:
+Cortar uma string se ela for muito longa (exibir apenas os primeiros X caracteres).
+Mostrar mensagens diferentes dependendo do tamanho do texto.
+Contar caracteres para saber, por exemplo, quantos caracteres o usuário já digitou (em apps de chat, tweets etc).
+Manipulação avançada:
+Criar algoritmos que dependem do tamanho da string (ex: criptografia, compressão, parsing).
+Loop para percorrer todos os caracteres de uma string usando o tamanho.
+
+EX:
+console.log("Olá".length);         // 3 (tem 3 letras: O, l, á)
+console.log("123456".length);      // 6 (tem 6 caracteres numéricos)
+console.log(" ".length);           // 1 (espaço também conta como caractere)
+console.log("".length);            // 0 (string vazia, nenhum caractere)
+console.log("Eu amo JavaScript!".length); // 18 (conta letras, espaços e símbolos)
+
+O que é contado?
+
+Letras maiúsculas e minúsculas.
+Espaços em branco.
+Números.
+Símbolos (como !, @, #, etc).
+
+EX:
+const nome = prompt("Digite seu nome:");
+
+if (nome.length > 20) {
+  alert("Nome muito longo! Use até 20 caracteres.");
+} else {
+  alert("Nome aceito!");
+}
+
+const senha = prompt("Crie uma senha:");
+
+if (senha.length >= 8) {
+  alert("Senha válida!");
+} else {
+  alert("Senha muito curta! Deve ter pelo menos 8 caracteres.");
+}
