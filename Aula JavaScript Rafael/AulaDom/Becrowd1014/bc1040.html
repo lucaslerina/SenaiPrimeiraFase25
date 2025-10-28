@@ -1,0 +1,128 @@
+<!--<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Consumo Médio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      color: #0078d7;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    input {
+      width: 80%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    #resultado {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora de Consumo Médio</h1>
+
+  <div class="container">
+    <label>Distância percorrida (km):</label><br>
+    <input type="number" id="distancia" placeholder="Ex: 500"><br>
+
+    <label>Combustível gasto (litros):</label><br>
+    <input type="number" id="combustivel" step="0.1" placeholder="Ex: 35.0"><br>
+
+    <button onclick="calcularConsumo()">Calcular</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function calcularConsumo() {
+      // Pega os valores digitados
+      const distancia = parseFloat(document.getElementById('distancia').value);
+      const combustivel = parseFloat(document.getElementById('combustivel').value);
+      const resultadoDiv = document.getElementById('resultado');
+
+      // Validação simples
+      if (isNaN(distancia) || isNaN(combustivel) || combustivel <= 0) {
+        resultadoDiv.innerHTML = "⚠️ Por favor, insira valores válidos!";
+        resultadoDiv.style.color = "red";
+        return;
+      }
+
+      // Calcula o consumo médio
+      const consumo = distancia / combustivel;
+
+      // Mostra o resultado formatado
+      resultadoDiv.style.color = "#0078d7";
+      resultadoDiv.innerHTML = `${consumo.toFixed(3)} km/l`;
+    }
+  </script>
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Consumo Médio</title>
+</head>
+<body>
+  <main>
+    <h1>Calculadora de Consumo Médio</h1>
+    <section>
+      <label for="distancia">Distância (km):</label>
+      <input id="distancia" type="number"><br><br>
+
+      <label for="combustivel">Combustível (L):</label>
+      <input id="combustivel" type="number"><br><br>
+
+      <button onclick="resultado.textContent = (distancia.value / combustivel.value).toFixed(3) + ' km/l'">
+        Calcular
+      </button>
+
+      <p id="resultado"></p>
+    </section>
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Porco 🐷</title>
+</head>
+<body>
+  <h1>O Porco 🐷</h1>
+
+  <label>Valor do produto (R$):
+    <input type="number" id="valorProduto" step="0.01">
+  </label><br>
+
+  <label>Moedas de 1 real:
+    <input type="number" id="moedas1" value="0">
+  </label><br>
+
+  <label>Moedas de 50 centavos:
+    <input type="number" id="moedas050" value="0">
+  </label><br>
+
+  <label>Moedas de 25 centavos:
+    <input type="number" id="moedas025" value="0">
+  </label><br>
+
+  <label>Moedas de 10 centavos:
+    <input type="number" id="moedas010" value="0">
+  </label><br>
+
+  <label>Moedas de 5 centavos:
+    <input type="number" id="moedas005" value="0">
+  </label><br><br>
+
+  <button onclick="porquinho()">Verificar Cofrinho</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function porquinho() {
+      const valor = parseFloat(document.getElementById("valorProduto").value) || 0;
+      const m1 = parseInt(document.getElementById("moedas1").value) || 0;
+      const m50 = parseInt(document.getElementById("moedas050").value) || 0;
+      const m25 = parseInt(document.getElementById("moedas025").value) || 0;
+      const m10 = parseInt(document.getElementById("moedas010").value) || 0;
+      const m5 = parseInt(document.getElementById("moedas005").value) || 0;
+
+      const total = m1*1 + m50*0.5 + m25*0.25 + m10*0.10 + m5*0.05;
+
+      let resultado = `Total no cofrinho: R$ ${total.toFixed(2)}<br>`;
+      resultado += `Valor do produto: R$ ${valor.toFixed(2)}<br>`;
+
+      if (total >= valor) {
+        resultado += "✅ Você tem dinheiro suficiente!";
+      } else {
+        resultado += `❌ Falta R$ ${(valor - total).toFixed(2)}.`;
+      }
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+  </script>
+</body>
+</html>

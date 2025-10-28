@@ -1,0 +1,83 @@
+/* ===========================
+   🎨 PALETA DE CORES
+   =========================== */
+:root {
+  --cor-fundo: #fff7ec;
+  --cor-caixa: #ffffff;
+  --cor-principal: #ff9900;
+  --cor-principal-escura: #e68a00;
+  --cor-texto: #333333;
+  --cor-sucesso: #2ecc71;
+  --cor-erro: #e74c3c;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   🌐 CONFIGURAÇÃO GERAL
+   =========================== */
+body {
+  background-color: var(--cor-fundo);
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ===========================
+   📦 CONTAINER PRINCIPAL
+   =========================== */
+.container {
+  background-color: var(--cor-caixa);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--sombra);
+  width: 360px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+/* ===========================
+   🐷 TÍTULOS E TEXTOS
+   =========================== */
+h1 {
+  color: var(--cor-principal);
+  margin-bottom: 8px;
+  font-size: 26px;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   🪙 CAMPOS DE ENTRADA
+   =========================== */
+label {
+  display: block;
+  margin-top: 12px;
+  color: var(--cor-texto);
+  font-weight: 500;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border
