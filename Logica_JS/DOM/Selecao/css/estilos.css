@@ -23,6 +23,7 @@ a{
     display: flex;
     padding: 15px;
     margin-left: 5px;
+    flex-wrap: wrap;
 }
 
 nav{
@@ -60,18 +61,29 @@ main{
     section {
         padding: 20px;
 
-        h2, p { 
+        h2,p { 
             margin-bottom: 20px;
         }
         p{
             line-height: 1.5;
                     }
-        &#es
-        portes { 
+                    h3, h4{
+                        margin-bottom: 15px;
+                    }
+                   
+        &#esportes { 
             p {
                 text-align: justify; 
+                
             }
+           
         }
+         &#economia {
+                p{
+                    text-align: justify;
+                    width: 300px;
+                }
+            }
     }
 }
 
