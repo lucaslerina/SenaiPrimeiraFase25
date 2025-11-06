@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/LiftSenai/css/style.css">
-    <title>LiftSenai 1.0</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <link rel="stylesheet" href="/LiftSenai/css/style_index.css">
+
+    <title>LiftSenai</title>
 </head>
 <body>
-    <header>
-    <h1>LiftSenai</h1>
+    <main class="container">
+        <form>
+            <h1> Login LiftSenai</h1>
+
+            <div class="input-box">
+                <input placeholder="Usuario" type="email">
+                <i class="bx bx-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input placeholder="Senha" type="password">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <!-- input é o que cria as caixas -->
+            <div class="remember-forgot">
+               
+                <label>
+                <input type="checkbox">
+                Lembrar Senha
+                </label>
+
+                <a href="#">Esqueci a Senha</a>
+            </div>
+
+            <button type="submit" class="login">Entrar</button>
+
+            <div class="register-link">
+                <p>Não tem uma conta: <a href="#">Cadastre-se</a></p>
+            </div>
+        </form>
     
-      </header>
-        
-
-
-
-    <script src="script.js"></script>
 </body>
-
-<footer>
-        <p>&reg; Site. Todos os direitos reservados.</p>
-    </footer>
 </html>
