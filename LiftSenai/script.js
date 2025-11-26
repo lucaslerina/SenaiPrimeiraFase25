@@ -30,7 +30,7 @@
     );
 
     if (usuarioEncontrado) {
-        alert('Seja bem-Vindo o LiftSenai!');
+        alert('Seja bem-Vindo ao LiftSenai!');
         
         // 💡 SALVA O USUÁRIO ATUAL: É útil salvar o usuário logado separadamente
         // Assim, o dashboard pode saber qual usuário buscar, e não apenas o último.
